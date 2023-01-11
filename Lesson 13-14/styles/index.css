@@ -1,0 +1,125 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    position:relative;
+    width: 1440px;
+    height: 3081px;
+
+    background: #FFFFFF;
+}
+.wrapper{
+    position: fixed;
+    width: 785px;
+    height: 2931px;
+    left: 535px;
+    top: 150px;
+    /* я з цією картинкою намахалась і вона всеодно не прилипає,а я вже заплутала сама себе і не бачу чому */
+    background-image: url(../images/bg-picture.png);
+    background-repeat: no-repeat;
+    background-size:40%;
+    background-position:right;
+    background-position-y: 150px;
+    background-attachment: fixed; 
+     
+}
+header{
+    position: absolute;
+    text-align: center;
+    width: 1440px;
+    height: 80px;
+    top: 15px;
+    margin-bottom: 150px;
+}
+.container{
+   display: flex;
+   flex-direction:row;
+   justify-content: center;
+    width: 1200px;
+    height: 54px;
+    left: 150px;
+}
+.logo{
+    padding-left: 150px;
+}
+.lang{
+    padding-right: 50px;
+}
+.wrapper{
+    position:absolute;
+    overflow: auto;
+    width: 785px;
+    height: 2931px;
+    left: 535px;
+    top: 150px;
+
+}
+.side-bar-item{
+    position: sticky;
+    width: 385px;
+    height: 462px;
+    left: 50px;
+    padding-top: 150px;
+}
+a{  
+    font-family: 'Francois One',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    color: #000000;
+}
+.section-item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 10px 40px;
+    gap: 40px;
+}
+.title{
+    width: 234px;
+    height: 48px;
+    white-space: nowrap;
+    font-family: 'Francois One', sans-serif; 
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 36px;
+    line-height: 48px;
+}
+sup{
+    vertical-align:text-top;
+    width: 100px;
+    height: 20px;
+
+    font-family: 'Farro';
+    font-style: normal;
+    font-weight: 300px;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+
+    color: #000000;
+}
+article{
+    width: 785px;
+    font-family: 'PT Sans',sans-serif;
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 28px;
+    line-height: 48px;
+    color: #000000;
+}
+i{
+    font-family:'PT Sans:ital',sans-serif;
+    font-style:italic;
+}
+b{
+    font-family:"PT Sans 700",sans-serif;
+}
+pre{
+    display: inline;
+    background-color: darkgrey;
+}

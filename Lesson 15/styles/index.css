@@ -1,0 +1,238 @@
+body {
+    background-color: whitesmoke;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+}
+.wrapper {
+    max-width: 100%;
+    width: 540px;
+    background-color:#FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+input {
+    background: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+    width: 245px;
+    height: 38px;
+    margin-top: 5px;
+    padding: 0px 10px 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+input:focus {
+    border: #007BFF 1px solid;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;  
+}
+.flex-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;  
+    color: #1C1C1C;
+}
+.subtitle {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #545454;
+}
+.comment {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #969696;
+    display: block;
+}
+#country {
+    width: 245px;
+    height: 38px;
+    background: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-top: 7px;
+}
+.radio {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;    
+    color: #545454;
+}
+.radio__customization {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+}
+.radio__customization .mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: 1px solid #E4E4E4;
+    border-radius: 50%;
+}
+
+.radio__customization input {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+.radio__customization input:checked ~.mark {
+    background-color: blue;
+}
+.label__radio--custom .mark::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.form-row {
+    margin-top: 20px;
+}
+.link {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: blue;
+}
+.form-row--email {
+    width: 100%;
+}
+#email-input {
+    width: 100%;
+}
+.test-email {
+    width: 100%;
+    display: block;
+    margin-right:25px;
+}
+
+.form-row--gender {
+    width: 100%;
+}
+
+.comment-border {
+    padding: 20px 60px;
+    text-align: center;
+    border-bottom: #E4E4E4 solid 1px;
+}
+.log-in {
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    color: #545454;
+}
+.link_privacy__link{
+    font-family: 'Inter';
+    font-style: normal; 
+}
+.log-in__link {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+}
+.form-button {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.submit-button {
+    width: 250px;
+    height: 30px;
+    border: white;
+    background-color: #007BFF;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.profile-section__wrapper {
+    padding-bottom: 50px;
+}
+.form-row--photo {
+    width: 100%;
+    display: flex;
+    position: relative;
+
+}
+#photo-input {
+    display: none;
+}
+.upload {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    margin-left: 20px;
+}
+.upload-customization {
+    width: 138px;
+    height: 30px;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+    margin-top: 30px;
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+
+}
+.upload-customization::after {
+    content:'Upload file...';
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 3px;
+    color: #969696;
+}
+.upload::after {
+    content: "Up to 1 MB (300x300 px)";
+    position: absolute;
+    top: 70px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #969696;
+
+}
+.button-trashcan {
+    background: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 6px;
+    top: 30px;
+    width: 30px;
+    height: 30px;
+    margin-left:-50px;
+}
+.button-trashcan__icon {
+    color: #969696;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <title>Form</title>
+  </head>
+  <body>
+    <main>
+      <section class="create-account-section">
+        <div class="wrapper create-account-section__wrapper">
+          <h1 class="title create-account-section__title">Create an Account</h1>
+          <form class="create-account">
+            <div class="flex-form">
+              <div class="form-row form-row--first-name">
+                 <label for="first-name-input" class="subtitle create-account-section__subtitle">
+                  First Name
+                 </label>
+                 <input type="text" name="first-name-input" id="first-name-input">
+              </div>
+              <div class="form-row form-row--last-name">
+                 <label for="last-name-input" class="subtitle create-account-section__subtitle">
+                  Last Name
+                 </label>
+                 <input class="input__main" type="text" name="last-name-input" id="last-name-input">
+              </div>
+              <div class="form-row form-row--email">
+                 <label for="email-input" class="subtitle create-account-section__subtitle">
+                  E-mail
+                 </label>
+                 <input type="email" name="email-input" id="email-input" />
+                 <p class="comment">
+                  We'll never share your email with anyone else.
+                 </p>
+              </div>
+              <div class="form-row form-row--gender">
+                 <label class="subtitle radio radio__customization">
+                  Male
+                  <input type="radio" name="gender" value="male" />
+                  <span class="mark"></span>
+                 </label>
+                 <label class="subtitle radio radio__customization">
+                  Female
+                  <input type="radio" name="gender" value="female" />
+                  <span class="mark"></span>
+                </label>
+              </div>
+              <div class="form-row form-row--country">
+                 <label for="country" class="subtitle create-account-section__subtitle">
+                  Country
+                 </label>
+                <select name="country" id="country">
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="USA">USA</option>
+                    <option value="Spain">Spain</option>
+                    <option value="China">China</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Poland">Poland</option>
+                   <option value="Netherlands">Netherlands</option>
+                </select>
+              </div>
+              <div class="form-row form-row--city">
+                 <label for="city-input" class="subtitle create-account-section__subtitle">
+                  City
+                 </label>
+                 <input type="text" name="city-input" id="city-input" />
+              </div>
+              <div class="form-button">
+                 <button class="submit-button" type="submit">Sign up</button>
+              </div>
+            </div>
+          </form>
+          <p class="comment comment-border"> By clicking the 'Sign Up' button, you confirm that you accept our<br>
+            <a class="link_privacy__link" href="#">Terms of use</a>&nbsp;and&nbsp;
+            <a class="link_privacy__link" href="#">Privacy Policy</a>
+          </p>
+          <span class="log-in">
+             Have an account?
+             <a class="link log-in__link" href="#">Log In</a>
+          </span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <section class="profile-section">
+        <div class="wrapper profile-section__wrapper">
+          <h1 class="title profile-section__title">Profile</h1>
+          <form class="profile">
+            <div class="flex-form">
+              <div class="form-row form-row--photo">
+                <div class="image-container">
+                   <img src="../assets/Image.png" alt="user photo" />
+                </div>
+                <div class="upload">
+                   <label for="photo-input" class="subtitle create-account-section__subtitle upload-customization"></label>
+                </div>
+                <input type="file" name="photo-input" id="photo-input" />
+                <button class="button-trashcan">
+                   <span class="fa fa-trash button-trashcan__icon" aria-hidden="true"></span>
+                </button>
+              </div>
+              <div class="form-row create-account-section--name">
+                 <label for="name-input" class="subtitle create-account-section__subtitle">
+                  Name
+                </label>
+                 <input type="text" name="name-input" id="name-input" />
+              </div>
+              <div class="form-row create-account-section--email">
+                <label for="email-input" class="subtitle create-account-section__subtitle">
+                  E-mail
+                </label>
+                <input class="test-email" type="email" name="email-input" id="email-input">
+              </div>
+              <div class="form-row form-row--country">
+                <label for="country" class="subtitle create-account-section__subtitle">
+                  Country
+                </label>
+                <select name="country" id="country">
+                  <option value="Ukraine">Ukraine</option>
+                  <option value="USA">USA</option>
+                  <option value="Spain">Spain</option>
+                  <option value="China">China</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Poland">Poland</option>
+                  <option value="Netherlands">Netherlands</option>
+                </select>
+              </div>
+              <div class="form-row form-row--city">
+                <label for="city-input" class="subtitle create-account-section__subtitle">
+                  City
+                </label>
+                <input type="text" name="city-input" id="city-input" />
+              </div>
+              <div class="form-row form-row--zip">
+                <label for="zip-code" class="subtitle create-account-section__subtitle">
+                  Zip Code
+                </label>
+                <input type="text" name="zip-code" id="zip-code" />
+              </div>
+              <div class="form-row form-row--phone">
+                <label for="phone" class="subtitle create-account-section__subtitle">
+                  Phone Number
+                </label>
+                <input type="tel" name="phone" id="phone" />
+              </div>
+              <div class="form-button">
+                <button class="submit-button" type="submit">
+                 Update
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

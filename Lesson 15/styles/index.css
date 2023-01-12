@@ -193,6 +193,16 @@ label {
     position: relative;
     margin-left: 20px;
 }
+i.fa {
+    width: 30px;
+    height: 30px;
+    line-height: 26px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    float: right;
+    color: #969696;
+}
 .upload-customization {
     width: 138px;
     height: 30px;

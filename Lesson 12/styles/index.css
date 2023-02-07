@@ -1,0 +1,116 @@
+header{
+    position: absolute;
+    width: 644px;
+    height: 45px;
+    left: 397px;
+    top: 120px;
+}
+h2{
+    font-family: 'Delius Unicase',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    color: #000000;
+}
+main{
+    width: 1400px;
+    margin: 135px;
+    margin-top: 245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* text-align: center; */
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 370px 770px 370px;
+    grid-template-rows: 370px; 
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    padding-bottom: 40px;
+}
+.wrapper_2{
+    display: grid;
+    grid-template-columns: 770px 370px 370px;
+    grid-template-rows: 370px; 
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    padding-bottom: 40px;
+}
+.img-item{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.img-item1{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.img-item2{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.img-item3{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+} 
+.img-item4{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+} 
+.img-item5{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+} 
+img{
+    overflow: hidden;
+    opacity: 100%;
+    -webkit-filter: blur(0);
+    filter: blur(0)
+
+}
+img:hover{
+    border-radius: 20px;
+    -webkit-filter: blur(1px);
+    filter: blur(1px)
+    opacity(0,6)
+    
+}
+.figcaption{
+    position: relative;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+
+}
+.bottom-left {
+    position: absolute;
+    bottom: 30px;
+    left: 16px;
+}
+.bottom-right {
+    position: absolute;
+    bottom: 30px;
+    right: 16px;
+}
+

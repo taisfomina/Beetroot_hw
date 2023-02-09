@@ -114,3 +114,20 @@ img:hover{
     right: 16px;
 }
 
+
+
+
+
+
+
+
+
+
+
+.grid-example {
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    grid-template-rows: repeat(3, 370px);
+    grid-gap: 30px;
+}
+

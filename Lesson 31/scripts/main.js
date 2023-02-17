@@ -1,181 +1,171 @@
-let userAge = +prompt ("How old are you?");
+//Normal, 1-st task
+let palindrome = prompt(`Вкажіть будь-яке число для перевірки на паліндром( не менше 2-х цифр).`);
+let n = 0;
 
-switch (true) {
-    case (userAge >= 0 && userAge <= 11):
-        alert ("You are a child")
-        break;
-    case (userAge >= 12 && userAge <= 17):
-        alert ("You're a teen")
-        break;
-    case (userAge >=18 && userAge <= 59):
-        alert ("You're an adult")
-        break;
-    case (userAge >= 60):
-        alert ("You're old")
-        break;
-    default:
-        alert ("Error")
-        break;
-}
+for (let i = 0; i < Math.floor(palindrome.length / 2); i++) {
 
-
-let userNum = +prompt ("Input number from 0 to 9");
-
-switch (userNum) {
-    case 0:
-        alert (")")
-        break;
-    case 1:
-        alert ("!")
-        break;
-    case 2:
-        alert ("@")
-        break;
-    case 3:
-        alert ("#")
-        break;
-    case 4:
-        alert ("$")
-        break;
-    case 5:
-        alert ("%")
-        break;
-    case 6:
-        alert ("^")
-        break;
-    case 7:
-        alert ("&")
-        break;
-    case 8:
-        alert ("*")
-        break;
-    case 9:
-        alert ("(")
-        break;
-    default:
-        alert ("Wrong number")
-        break;
-}
-
-
-
-
-let rangeStart = +prompt ("Enter first number of your range");
-let rangeEnd = +prompt ("Enter second number of your range");
-let result = 0;
-
-for (let i = rangeStart; i <=rangeEnd; i++) {
-    result += i;
-}
-alert ("Summ of numbers in your range is " + result); 
-
-
-
-let firstNum = +prompt ("Input first number");
-let secondNum = +prompt ("Input second number");
-let divider = 0;
-
-for (let i = 1; ; i++) {
-    if (i > firstNum && i > secondNum) {
-        break;
-    }
-    if ( firstNum % i == 0 && secondNum % i == 0 ) {
-        divider = i;
+    if (palindrome.charAt(i) == palindrome.charAt(palindrome.length - 1 - i)) {
+        n++;
+    } else {
+        break
     }
 }
-alert ("Your biggest divider is " +divider); 
-
-
-
-
-
-let num = +prompt ("Input your number");
-for (let i = 1; i <= num; i++) {
-    if (num % i == 0) {
-        alert ( "divider of your number is " +i );
-    }
-} 
-
-
-
-
-
-
-
-
-const userNumber = confirm ("Input five numbers to create a five digit number");
-let firstNumber = +prompt ("Input first number");
-let secondNumber = +prompt ("Input second number");
-let thirdNumber = +prompt ("Input third number");
-let fourthNumber = +prompt ("Input fourth number");
-let fifthNumber = +prompt ("Input fifth number");
-
-
-    if (firstNumber == fifthNumber && secondNumber == fourthNumber ) {
-        alert ("Number is palindrome");
-    } 
-    else {
-        alert ("This number is not palindrome")
-    } 
-// Так, я знаю що зробила якусь фігню, але іншого нічого не придумалось 
- //А інші способи я якось не зрозуміла
-
-
-
-let userPurchase = +prompt ("Enter purchase amount in dollars ");
-if (userPurchase >= 200 && userPurchase < 300) {
-    alert ("Your discount is 3%, now you have to pay " +userPurchase / 100 * 97 + "dollars")
-}
-else if (userPurchase >= 300 && userPurchase < 500) {
-    alert ("Your discount is 5%, now you have to pay " +userPurchase / 100 * 95 + "dollars")
-}
-else if (userPurchase >= 500 ) {
-    alert ("Your discount is 7%, now you have to pay " +userPurchase / 100 * 93 + "dollars")
-}
-else {
-    alert ("You won't have a discount, you have to pay " +userPurchase +" dollars")
+if (n == Math.floor(palindrome.length / 2)) {
+    alert(`Це дійсно паліндром.`);
+} else {
+    alert(`Це число не є паліндромом.`);
 }
 
+// Normal, 2-nd task
 
+let usersPrice = +prompt(`Яка сума Вашої покупки?`);
+console.log(usersPrice);
+let usersDiscount;
+let userSumm;
 
-let positiveNum = 0;
-let negativeNum = 0;
-let zeroNum = 0;
-let oddNum = 0;
-let evenNum = 0;
-for (let i = 1; i <= 10; i++) {
-    let userNumCheck = +prompt ("Enter your number");
-    if (userNumCheck > 0) {
-        positiveNum++;
-    }
-    else if (userNumCheck < 0 ) {
-        negativeNum++;
-    }
-    else if (userNumCheck == 0 ) {
-        zeroNum++;
-    }
-    if (userNumCheck % 2 == 0) {
-        evenNum++;
-    }
-    if (userNumCheck % 2 !== 0) {
-        oddNum++;
-    }
+function whatADiscount() {
+    if (usersPrice >= 200 && usersPrice <= 300) {
+        usersDiscount = +usersPrice * 0.03;
+    } else if (usersPrice > 300 && usersPrice < 500) {
+        usersDiscount = +usersPrice * 0.05;
+    } else if (usersPrice >= 500) {
+        usersDiscount = +usersPrice * 0.07
+    } else {
+        usersDiscount = 0
 
+    }
+    userSumm = usersPrice - usersDiscount;
+
+    return userSumm;
 }
-alert ("Positive numbers: " + positiveNum + " Negative numbers: " + negativeNum + " Zeros: " + zeroNum + " Odd numbers: " + oddNum + " Even numbers: " + evenNum);
+whatADiscount()
+alert(`Сума зі знижкою: ${userSumm}грн. Знижка : ${usersDiscount} грн.`);
 
+//Normal, 3-rd task
 
-let weekArr = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
-let confirmation;
-let day = 0;
+let userNum = prompt('Введіть десять чисел у форматі: число, число,.. ');
+let userArray = userNum.split(',', 10);
+let posNum = 0,
+    negNum = 0,
+    zero = 0,
+    odd = 0,
+    even = 0;
+
+for (let i = 0; i < userArray.length; i++) {
+
+    if (userArray[i] > 0) {
+        posNum++;
+    } else if (userArray[i] < 0) {
+        negNum++
+    } else if (userArray[i] == 0) {
+        zero++
+    }
+    if (userArray[i] % 2 == 0) {
+        odd++
+    } else {
+
+        even++
+    }
+}
+alert(`Ви ввели: ${posNum} позитивних значень, ${negNum} негативних значень, ${zero} нулів. З них: ${odd} парні and ${even} непарні.`);
+
+//Normal, 4-th task
+
+let weekArr = [`Понеділок`, `Вівторок`, `Середа`, `Четвер`, `П'ятниця`, `Субота`, `Неділя`];
+let question;
+let day = 0
 
 do {
-    confirmation = confirm ("Today is " + weekArr[day]  + " , wanna see the next day?");
+    question = confirm(`${weekArr[day]}. Чи хочеш побачити наступний день тижня?`);
     if (day == weekArr.length - 1) {
-        day = 0;
-    }
-    else {
-        day++;
+        day = 0
+    } else {
+        day++
     }
 
-} while (confirmation == true);
+} while (question == true);
+
+//Hard, 1-st task
+
+function game() {
+    let min = 0;
+    let max = 100;
+    let middle = Math.floor((min + max) / 2);
+    for (;;) {
+
+        let awnser = prompt(`Твоє число більше, менше, чи дорівнює числу  ${middle}?`)
+        if (awnser === "<") {
+            max = middle;
+            middle = Math.floor((min + max) / 2);
+            if (max == middle) {
+                middle -= 1;
+            }
+            console.log(middle);
+
+        } else if (awnser === ">") {
+            min = middle;
+            middle = Math.floor((min + max) / 2);
+            if (min == middle) {
+                middle += 1;
+            }
+            console.log(middle);
+        } else if (awnser === "=") {
+            max = middle;
+            min = middle;
+            alert(`Твоє число:  ${ middle }.`);
+            break
+        } else {
+            alert('Відповідь надана не по правилам. Якщо ти бажаєш завершити гру, закрий сторінку');
+            continue
+        }
+    }
+}
+restart:
+    for (;;) {
+        let startOfGame;
+        alert(`Вітаю у грі "Вгадай число".
+Ти загадуєш число від 0 до 100, программа у тебе запитує чи це число більше, менше або дорівнює тому, що ти загадав.
+Ти маєш вводити символи у поле, для того щоб надати відповідь:
+"=" - якщо вгадав,
+">" - якщо більше за те число, яке видав інтерфейс,
+"<" - якщо менше за те число, яке видав інтерфейс.
+Приємної гри.`);
+        game();
+        startOfGame = confirm(`Чи хочеш ти зіграти ще раз?`)
+        if (startOfGame == true) {
+            continue restart
+        } else {
+            alert(`Якщо закортить пограти ще, перезавантаж сторінку.
+            Гарного дня! ♥`)
+            break
+        }
+    }
+
+//Hard, 2-nd task
+
+let a;
+let b;
+let summ;
+console.log(`Табличка множення.
+Множимо на 2`);
+
+for (a = 2; a <= 9; a++) {
+    for (b = 1; b <= 10; b++) {
+        summ = a * b;
+        console.log(`${a} x ${b} = ${summ}`)
+
+    }
+    if (a == 9) {
+        break
+    }
+    console.log(`
+        Множимо на ${a + 1}
+        `)
+}
+
+//Hard, 3-rd task
+let userDate = prompt(`Вкажіть дату у форматі РРРР-ММ-ДД`);
+let nextDate = new Date(userDate);
+nextDate.setDate(nextDate.getDate() + 1);
+let date = nextDate.toISOString().split(`T`)[0];
+alert(`Наступна дата: ${date}.`);
